@@ -31,11 +31,11 @@ class Porta{
     }
 }
 
-const porta = new Porta('Quarto'); //criei um objeto
+const porta = new Porta('Sala'); //criei um objeto
 porta.abrir() //abrir a porta 
 porta.fechar() //fechado
 
-console.log(`SITUAÇÃO ATUAL: ${porta.estaAberta}`)
+console.log(`SITUAÇÃO ATUAL: ${porta.estaAberta()}`)
 console.log(porta.sala)
 porta.aberta = true;
 porta.sala  = 'Sala 2';

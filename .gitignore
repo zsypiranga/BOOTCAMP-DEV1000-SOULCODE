@@ -1,1 +1,15 @@
-node_modules
+# Dependências instaladas localmente
+node_modules/
+**/node_modules/
+
+# Arquivos temporários criados pelo Code Runner do VS Code
+**/tempCodeRunnerFile.*
+
+# Configurações locais e segredos
+.env
+.env.*
+!.env.example
+
+# Saídas geradas
+dist/
+coverage/

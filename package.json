@@ -1,12 +1,8 @@
 {
   "name": "trilha-start",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "description": "Exercícios e materiais de estudo do bootcamp Dev1000 SoulCode.",
+  "private": true,
   "type": "commonjs",
   "devDependencies": {
     "@types/node": "^26.6.5",
