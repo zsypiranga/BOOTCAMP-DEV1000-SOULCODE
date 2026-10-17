@@ -1,0 +1,18 @@
+//CRIAÇÃO DA CLASSE CARRINHO QUE VAI RECEBER UM UNICO ATRIBUTO QUE NASCE VAZIA QUE É A LISTA ITENS
+class Carrinho{
+    itens = []; 
+
+
+adicionarItem(nome, preco, quantidade){
+        const nomeLimpo = nome.trim(); //CRIEI UMA VARIAVEL NOMELIMPO ONDE VAI GUARDAR A LIMPEZA DOS ESPAÇOS DO PARAMETRO COM TRIM
+        if(nomeLimpo.length === 0){ //AQUI PERGUNTEI SE O VALOR (CARACTERES) GUARDADO DENTRO DA VARIAVEL É 0, EXIBA A MENSAGEM DO ERRO
+            throw new Error('Nome do item obrigátorio.'); //MENSAGEM A SER EXIBIDA DE ERRO 
+        }
+
+        if(!Number.isFinite(preco) || preco <= 0){// TRANSFORMEI O VALOR DENTRO DE PREÇO EM UM VALOR DO TIPO NUMBER E PEGUNTEI SE ELE É FINITO, CASO ELE NAO FOR VAI AVABÇAR NO IF (UTILIZEI ! PRA SER A SITUAÇÃO INVERSA) E TAMBEM USEI || OU PRA CASO O NUMERO FOR IGUAL A 0 OU MENOR DÁ ERRO
+            
+        } 
+}
+
+
+}
