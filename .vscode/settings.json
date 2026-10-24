@@ -1,0 +1,6 @@
+{
+  "code-runner.executorMap": {
+    "typescript": "npx --silent tsx"
+  },
+  "code-runner.showExecutionMessage": false
+}

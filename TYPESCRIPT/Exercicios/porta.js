@@ -1,3 +1,4 @@
+"use strict";
 /*
 Crie a classe Porta:
 
@@ -8,36 +9,29 @@ Fora da classe, crie uma porta, abra, feche e mostre o estado com console.log.
 Depois, tente escrever porta.aberta = true e porta.sala = 'Sala 2'.
 
 */
-
-
-class Porta{
-    private aberta: boolean = false
-
-    public readonly sala: string; 
-
-    public constructor(sala: string){
-            this.sala  = sala;
+Object.defineProperty(exports, "__esModule", { value: true });
+class Porta {
+    aberta = false;
+    sala;
+    constructor(sala) {
+        this.sala = sala;
     }
-
-    abrir(){
+    abrir() {
         this.aberta = true;
     }
-
-    fechar(){
+    fechar() {
         this.aberta = false;
     }
-    estaAberta() : boolean{
-       return this.aberta;
+    estaAberta() {
+        return this.aberta;
     }
 }
-
 const porta = new Porta('Sala'); //criei um objeto
-porta.abrir() //abrir a porta 
-porta.fechar() //fechado
-
-console.log(`SITUAÇÃO ATUAL: ${porta.estaAberta()}`)
-console.log(porta.sala)
+porta.abrir(); //abrir a porta 
+porta.fechar(); //fechado
+console.log(`SITUAÇÃO ATUAL: ${porta.estaAberta()}`);
+console.log(porta.sala);
 porta.aberta = true;
-porta.sala  = 'Sala 2';
-
-console.log(porta.sala)
+porta.sala = 'Sala 2';
+console.log(porta.sala);
+//# sourceMappingURL=porta.js.map
