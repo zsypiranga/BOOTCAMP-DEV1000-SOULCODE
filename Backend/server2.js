@@ -1,9 +1,33 @@
-// Importa o framework Express para dentro do nosso projeto (permite criar o servidor e rotas)
 const express = require('express');
-
-// Cria uma instância do Express. É a nossa aplicação/servidor principal, que vamos chamar de 'app'
 const app = express();
-
-// Configura um "middleware": ensina o servidor a traduzir os dados que chegam no formato JSON (corpo da requisição)
 app.use(express.json());
 
+let produtos = [
+  { id: 1, nome: "Notebook", preco: 3500 },
+  { id: 2, nome: "Mouse", preco: 80 },
+  { id: 3, nome: "Teclado", preco: 150 }
+];
+
+app.get('/api/produtos', (req, res) => {
+  res.json(produtos);
+});
+
+app.post('/api/produtos', (req, res) => {
+  const novoProduto = {
+    id: produtos.length + 1,
+    nome: req.body.nome,
+    preco: req.body.preco
+  };
+  produtos.push(novoProduto);
+  res.status(201).json(novoProduto);
+});
+
+app.delete('/api/produtos/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  produtos = produtos.filter(produto => produto.id !== id);
+  res.status(204).send();
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando em http://localhost:3000');
+});

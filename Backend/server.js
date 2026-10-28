@@ -6,9 +6,13 @@ const app = express();
 app.use(express.json());
 // Simula um "banco de dados" temporário utilizando um array (uma lista) guardado na memória RAM do computador
 let alunos = [
-  { id: 1, nome: "Ana", idade: 20 },     // Primeiro objeto aluno cadastrado de fábrica
-  { id: 2, nome: "Carlos", idade: 22 }   // Segundo objeto aluno cadastrado de fábrica
-];
+    { id: 1, nome: "Ana", idade: 20 },
+    { id: 2, nome: "Carlos", idade: 22 },
+    { id: 3, nome: "Mariana", idade: 19 },
+    { id: 4, nome: "Pedro", idade: 21 },
+    { id: 5, nome: "Juliana", idade: 23 }
+  ];
+
 // --- 1. GET: Rota para buscar/listar todos os alunos ---
 // Quando alguém fizer um GET na URL '/api/alunos', essa função será executada
 app.get('/api/alunos', (req, res) => {
@@ -44,3 +48,4 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
 });
+
