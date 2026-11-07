@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+  
+</head>
+<body>
+    <form action="#" method="get">
+        <h1>Formulário</h1>
+
+        <label for="nome">Nome: </label>
+        <input type="text"
+               id="nome"
+               name="nome"
+               placeholder="Digite o seu nome"
+               autofocus
+               required
+               minlength="3"
+               maxlength="50"
+               autocomplete="name">
+        <br><br>
+
+        <label for="cpf">CPF: </label>
+        <input type="text"
+               id="cpf"
+               name="cpf"
+               placeholder="000.000.000-00"
+               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+               title="Formato: 000.000.000-00"
+               required>
+        <br><br>
+
+        <label for="nascimento">Data de nascimento: </label>
+        <input type="date"
+               id="nascimento"
+               name="nascimento"
+               min="1940-01-01"
+               max="2026-11-06">
+        <br><br>
+
+        <label for="satisfacao">Nível de satisfação: </label>
+        <input type="range"
+               id="satisfacao"
+               name="satisfacao"
+               min="0"
+               max="100"
+               step="5"
+               value="50">
+        <br><br>
+
+        <label for="cor">Escolha sua cor favorita: </label>
+        <input type="color"
+               id="cor"
+               name="cor"
+               value="#0080ff">
+        <br><br>
+
+        <label for="cidade">Cidade: </label>
+        <input type="text"
+               id="cidade"
+               name="cidade"
+               list="lista-cidade"
+               placeholder="Digite sua busca">
+
+        <datalist id="lista-cidade">
+            <option value="São Paulo">
+            <option value="Rio de Janeiro">
+            <option value="Belo Horizonte">
+        </datalist>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
