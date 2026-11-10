@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(248, 245, 245);
+    color: #333333;
+    padding: 20px;
+}
+
+#titulo-principal{
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cartao{
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,.5);
+    text-align: center;
+}
+
+.cartao p{
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.botao{
+    display: inline-block;
+    background-color: #4c7adf;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.botao:hover{
+    padding: 12px 17px;
+    background-color: #0f5bff;
+    transition: 0.3s;
+}
+
+.botao:active{
+    background-color: red;
+}
