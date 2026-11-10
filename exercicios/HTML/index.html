@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo</title>
+</head>
+<body>
+
+    <header>
+        <img src="img/SãoPaulo.jpg" alt="Imagem da cidade de São Paulo" width="250px">
+        <h1>Cidade de São Paulo</h1>
+        <h2>A maior metrópole da América Latina</h2>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2> Confira os melhores passeios na cidade</h2>
+        <ul>
+            <li>MASP - Museu de Arte de São Paulo</li>
+            <li>Catedral Metropolitana da Sé</li>
+            <li>Aquário de São Paulo</li>
+        </ul>
+        <hr>
+
+        <section>
+            <h3>Museu de Arte de São Paulo</h3>
+            <p>é o <em>primeiro museu moderno do país</em>  e um dos principais centros culturais do Brasil. 
+            Fundado em 1947 pelo empresário Assis Chateaubriand e pelo crítico italiano Pietro Maria Bardi.</p>
+            <img src="img/masp.webp" alt="Foto do MASP" width="300" height="200">
+        </section>
+      
+        <section>
+            <h3>Catedral Metropolitana da Sé</h3>
+            <p>Uma das maiores igrejas neogóticas do mundo. Suas imensas torres de 92 
+            metros e os detalhes esculpidos com fauna e flora brasileiras impressionam.</p>
+            <img src="img/Se1.jpg" alt="Foto da igreja por fora" width="300" height="200">
+        </section>
+
+
+        <section>
+            <h3>Aquário de São Paulo</h3>
+            <p>É o primeiro e único aquário totalmente temático da América Latina. 
+            Localizado no tradicional bairro do Ipiranga</p>
+            <img src="img/Aquario.jpg" alt="Foto do aquario de São Paulo" width="300" height="200">
+        </section>
+
+        <br>
+
+        <form action="">
+
+            <fieldset>
+                <legend>Identificação do Visitante</legend>
+
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required placeholder="Seu nome completo" autofocus>
+                <br><br>
+
+                <label for="email">Email: </label>
+                <input type="email" required id="email" name="email">
+                <br><br>
+
+                <label for="tel">Telefone:</label>
+                <input type="tel"
+                id="tel"
+                name="tel"
+                pattern="\(\d{2}\)\s?9\d{4}-\d{4}"
+                placeholder="(DD) 9XXXX-XXXX"
+                title="Formato: (11)94000-0000"
+                required
+                >
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Opinião & Ponto Turístico</legend>
+
+                <label for="ponto_turistico">Escolha seu ponto turístico favorito:</label>
+                <input type="text"
+                id="ponto_turistico"   
+                name="ponto_turistico"
+                list="lista_pontos" 
+                >
+
+            <datalist id="lista_pontos"> 
+                <option value="Aquário de São Paulo"></option>
+                <option value="Museu do Ipiranga"></option>
+                <option value="Museu de Arte de São Paulo"></option>
+                <option value="Mercado Municipal de São Paulo"></option>
+            </datalist>
+
+            <br><br>
+
+
+            <label for="avaliacao">Avalia a cidade de São Paulo</label><br>
+            01<input type="range" min="1" max="10" value="5" id="avaliacao" name="avaliacao">10
+            <br><br>
+            <label for="cor">Escolha a cor do tema ➡️</label>
+            <input type="color" value="#0080ff" id="cor" name="cor">
+
+            <br><br><br>
+            <label for="opiniao">Escreva sua experiencia</label><br>
+            <textarea name="opiniao" id="opiniao" rows="5" placeholder="Escreva sua experiencia na cidade de São Paulo" minlength="5" maxlength="100"></textarea>
+            </fieldset>
+
+            <br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Reset</button>
+            
+        </form>
+
+        <hr>
+        <footer>
+            <p><small>&copy; 2026 - Todos os direitos reservados.</small></p>
+        </footer>
+
+    </main>
+</body>
+</html>
