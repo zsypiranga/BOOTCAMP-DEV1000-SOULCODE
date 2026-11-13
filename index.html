@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu primeiro DOM</title>
+  <style>
+    .destaque { color: blue; }   /* classe que vamos aplicar pelo JS */
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Olá</h1>
+  <div id="area"></div>
+
+  <script>
+    // 1. BUSCAR: liga a variável ao <h1> da página
+    const titulo = document.getElementById("titulo");
+
+    // 2. MUDAR o texto do <h1>
+    titulo.textContent = "Comecei a Trilha Start";
+
+    // 3. MUDAR o estilo: adiciona a classe "destaque" (fica azul)
+    titulo.classList.add("destaque");
+
+    // 4. CRIAR: monta um parágrafo ainda fora da página
+    const paragrafo = document.createElement("p");
+    paragrafo.textContent = "Este parágrafo foi criado pelo JavaScript.";
+
+    // 5. COLOCAR o parágrafo dentro do <div id="area">
+    const area = document.getElementById("area");
+    area.appendChild(paragrafo);
+  </script>
+</body>
+</html>
