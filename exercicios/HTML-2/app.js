@@ -1,50 +1,66 @@
-// ===== TEMA =====
-const temaEscuro = document.querySelector('#btn-tema');
+// TEMA 
+const tema = document.querySelector('#btn-tema');
+tema.addEventListener('click', () =>{
+ const situacaoAtual = document.body.classList.toggle('dark-mode')
+  tema.textContent = situacaoAtual  ? '☀️ Modo CLaro' : '🌙 Modo Escuro';
 
-temaEscuro.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+})
 
 
-
+//REAÇÃO DE CURTIR
 const curtir = document.querySelector('#btn-curtir');
-const numeroDeCurtida = document.querySelector('#cont-curtir');
-let totalCurtidas = 0;
+const contadorCurtir = document.querySelector('#cont-curtir');
+let totalCurtir = 0;
+curtir.addEventListener('click', () =>{
+   totalCurtir++;
+  contadorCurtir.textContent = totalCurtir;
+})
 
-curtir.addEventListener('click', () => {
-  totalCurtidas++;
-  numeroDeCurtida.textContent = totalCurtidas;
-});
-
-
-
+//REAÇÃO DE AMEI
 const amei = document.querySelector('#btn-amei');
-const numeroDeAmei = document.querySelector('#cont-amar'); 
-let totalAmei = 0;
+const contadorAmei = document.querySelector('#cont-amar');
+let totalAmar = 0;
+amei.addEventListener('click', () =>{
+  totalAmar++;
+  contadorAmei.textContent = totalAmar;
+})
 
-amei.addEventListener('click', () => {
-  totalAmei++;
-  numeroDeAmei.textContent = totalAmei;
-});
-
-
-
+//REAÇÃO DE SHOW
 const show = document.querySelector('#btn-show');
-const numeroDeShow = document.querySelector('#cont-fogo');  
+const contadorShow = document.querySelector('#cont-fogo');
 let totalShow = 0;
-
-show.addEventListener('click', () => {
+show.addEventListener('click', () =>{
   totalShow++;
-  numeroDeShow.textContent = totalShow;
-});
+  contadorShow.textContent = totalShow;
+})
 
-
-
+//REAÇÃO DE DUVIDA 
 const duvida = document.querySelector('#btn-duvida');
-const numeroDeDuvida = document.querySelector('#cont-duvida');
+const contadorDuvida = document.querySelector('#cont-duvida');
 let totalDuvida = 0;
 
 duvida.addEventListener('click', () => {
   totalDuvida++;
-  numeroDeDuvida.textContent = totalDuvida;
-});
+  contadorDuvida.textContent = totalDuvida;
+})
+
+
+
+
+
+
+const formulario = document.querySelector('.form-comentario')
+const comentarios = document.querySelector('#input-comentario');
+
+formulario.addEventListener('submit', (evento) =>{
+evento.preventDefault();
+ 
+
+const textoLimpo = comentarios.value.trim();
+
+
+
+  
+
+})
+
