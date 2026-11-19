@@ -1,0 +1,212 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        158deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 51, 1) 48%,
+        rgba(0, 0, 0, 1) 100%
+    );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: aliceblue;
+}
+
+.btn-tema {
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    right: 30px;
+    font-size: 25px;
+    border-radius: 8%;
+    border: 2px solid aliceblue;
+    background: rgb(20, 20, 46);
+    color: aliceblue;
+}
+
+.btn-tema:hover {
+    cursor: pointer;
+}
+
+.cabecalho {
+    height: 510px;
+    display: flex;
+    padding: 30px;
+}
+
+.fotoDePerfil {
+    height: 450px;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid aliceblue;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome {
+    color: aliceblue;
+    font-size: 100px;
+    margin: 20px;
+    letter-spacing: 6px;
+    margin-top: 20px;
+}
+
+#cargo {
+    color: aliceblue;
+    font-size: 30px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+main {
+    display: flex;
+    padding: 30px;
+}
+
+#sobre-mim {
+    margin-right: 50px;
+    width: 65%;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    padding: 20px;
+    height: auto;
+}
+
+#sobre-mim h2 {
+    font-size: 60px;
+    padding: 5px;
+}
+
+#sobre-mim p {
+    width: 100%;
+    font-size: 25px;
+}
+
+.habilidades {
+    padding: 30px;
+    color: rgb(0, 0, 51);
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    width: 35%;
+}
+
+
+.habilidades h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+
+.hard-skills {
+    list-style: none;
+}
+
+.hard-skills li {
+    background-color: rgb(0, 0, 51);
+    color: aliceblue;
+    font-size: 25px;
+    padding: 10px 15px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+
+#rodape {
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+}
+
+
+body.tema-claro {
+    background: linear-gradient(158deg, #ffffff 0%, #dbe9ff 48%, #ffffff 100%);
+    color: rgb(0, 0, 51);
+}
+
+body.tema-claro .nome,
+body.tema-claro #cargo {
+    color: rgb(0, 0, 51);
+}
+
+body.tema-claro .fotoDePerfil,
+body.tema-claro #sobre-mim,
+body.tema-claro .habilidades {
+    border-color: rgb(0, 0, 51);
+}
+
+body.tema-claro .btn-tema {
+    background: #ffffff;
+    color: rgb(0, 0, 51);
+    border-color: rgb(0, 0, 51);
+}
+
+
+@media (max-width: 900px) {
+
+    .btn-tema {
+        position: static;
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .cabecalho {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fotoDePerfil {
+        height: 250px;
+    }
+
+    .nome {
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+
+    #cargo {
+        font-size: 20px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #sobre-mim {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    #sobre-mim h2 {
+        font-size: 36px;
+    }
+
+    #sobre-mim p {
+        font-size: 18px;
+    }
+
+    .habilidades {
+        width: 100%;
+    }
+}
